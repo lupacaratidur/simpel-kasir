@@ -1,7 +1,3 @@
-<!-- 
-    created by msaifa
-    @ 2020
- -->
 <?php
 
 
@@ -41,7 +37,7 @@ if (isset($_POST['simpan'])) {
       }
       $grandtotal += $sub;
 
-      // $msg = $sql . '<br>' ;
+      $msg = $sql . '<br>';
     }
 
     $sql = "INSERT INTO transaksi values ('$trafaktur','$tanggal','$trapelanggan',$grandtotal,$userid)";
@@ -65,7 +61,7 @@ if (isset($_POST['simpan'])) {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-  <title>Penjualan - msaifa</title>
+  <title>Penjualan - SiKasir</title>
   <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css?h=3c16114e461561544db42dd299b535e5">
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
@@ -81,7 +77,7 @@ if (isset($_POST['simpan'])) {
       <div class="container-fluid d-flex flex-column p-0">
         <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
           <div class="sidebar-brand-icon rotate-n-15"><i class="fas fa-laugh-wink"></i></div>
-          <div class="sidebar-brand-text mx-3"><span>msaifa</span></div>
+          <div class="sidebar-brand-text mx-3"><span>SiKasir</span></div>
         </a>
         <hr class="sidebar-divider my-0">
         <ul class="nav navbar-nav text-light" id="accordionSidebar">
@@ -97,7 +93,7 @@ if (isset($_POST['simpan'])) {
           <li class="nav-item" role="presentation"><a class="nav-link" href="laporan.php"><i class="icon-list"
                 style="font-size: 20px;"></i><span style="font-size: 18px;margin-left: 10px;">Laporan</span></a></li>
           <li class="nav-item" role="presentation"><a class="nav-link" href="about.php"><i class="icon-info"
-                style="font-size: 20px;"></i><span style="font-size: 18px;margin-left: 10px;">Tentang msaifa</span></a>
+                style="font-size: 20px;"></i><span style="font-size: 18px;margin-left: 10px;">Tentang SiKasir</span></a>
           </li>
           <li class="nav-item" role="presentation"></li>
         </ul>
@@ -114,7 +110,7 @@ if (isset($_POST['simpan'])) {
         <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top"></nav>
         <div class="container-fluid">
           <h3 class="text-dark mb-4">Penjualan</h3>
-          <? $msg ? '<h6 class="text-dark mb-4"> . $msg . </h6>' : "" ?>
+          <?php $msg ?> <h6 class="text-dark mb-4"></h6>
           <form method="POST">
             <div class="row">
               <div class="col">
@@ -163,6 +159,7 @@ if (isset($_POST['simpan'])) {
 
                           if ($cart) {
                             foreach ($cart as $i => $val) {
+                              error_reporting(E_ALL && ~E_NOTICE);
                           ?>
                           <tr>
                             <td><?= $val['pronama'] ?></td>
@@ -171,6 +168,7 @@ if (isset($_POST['simpan'])) {
                             <td><a href="penjualan-hapus.php?p=<?= $val['proid'] ?>" class="btn btn-primary"
                                 style="background-color: #e74a3b;">Hapus</a></td>
                           </tr>
+
                           <?php
                               $total += $val['proharga'] * $val['jumlah'];
                             }
@@ -201,6 +199,7 @@ if (isset($_POST['simpan'])) {
       </div>
       <footer class="bg-white sticky-footer">
         <div class="container my-auto">
+          <div class="text-center my-auto copyright"><span>Copyright © SiKasir 2022</span></div>
         </div>
       </footer>
     </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
