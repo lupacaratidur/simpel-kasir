@@ -1,7 +1,3 @@
-<!-- 
-    created by SiKasir
-    @ 2022
- -->
 <!DOCTYPE html>
 <html>
 

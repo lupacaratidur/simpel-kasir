@@ -1,8 +1,3 @@
-<!-- 
-    created by SiKasir
-    @ 2020
- -->
-
 <?php
 require './conf/init.php';
 cek();

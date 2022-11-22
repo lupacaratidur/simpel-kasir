@@ -1,7 +1,3 @@
-<!-- 
-    created by silvia
-    @ 2022
--->
 <?php
 require 'conf/init.php';
 ?>
@@ -38,7 +34,7 @@ require 'conf/init.php';
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-          <li class="nav-item"><a class="nav-link active" href="#whyus">Kenapa Kami?</a></li>
+          <li class="nav-item"><a class="nav-link " href="#whyus">Kenapa Kami?</a></li>
           <li class="nav-item"><a class="nav-link" href="#layanan">Layanan</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
           <li class="gets"><a class="getstarted" href="pages/login.php">Daftar/Login</a></li>

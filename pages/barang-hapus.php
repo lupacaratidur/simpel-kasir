@@ -1,7 +1,3 @@
-<!-- 
-    created by msaifa
-    @ 2022
- -->
 <?php
 
 require '../conf/init.php';
