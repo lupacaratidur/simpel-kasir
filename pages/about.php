@@ -54,8 +54,8 @@
           <div class="row mb-3">
             <div class="col-lg-4">
               <div class="card mb-3">
-                <div class="card-body text-center shadow"><img class="rounded-circle mb-3 mt-4" src="" width="200"
-                    height="200"></div>
+                <div class="card-body text-center shadow"><img class="rounded-circle mb-3 mt-4"
+                    src="../assets/img/kasir.jpg?h=a0a7d00bcd8e4f84f4d8ce636a8f94d4" width="200" height="200"></div>
               </div>
             </div>
             <div class="col-lg-8">

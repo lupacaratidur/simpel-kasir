@@ -2,6 +2,7 @@
 
 require '../conf/init.php';
 cek();
+$msg = "";
 
 if (isset($_POST['simpan'])) {
   $pronama = $_POST['pronama'];
@@ -9,14 +10,14 @@ if (isset($_POST['simpan'])) {
   $projumlah = $_POST['projumlah'];
 
   if (empty($pronama) || empty($proharga) || empty($projumlah)) {
-    $ms = 'Harap masukkan data dengan benar';
+    $msg = 'Harap masukkan data dengan benar';
   } else {
     $sql = "CALL sto_tambahProduk('$pronama',$proharga,$projumlah);";
 
     if (query($sql)) {
       header("Location: {$base_url}pages/barang.php");
     } else {
-      $ms = 'Gagal Menambah Data ! Harap masukkan data dengan benar';
+      $msg = 'Gagal Menambah Data ! Harap masukkan data dengan benar';
     }
   }
 }

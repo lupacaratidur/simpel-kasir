@@ -2,10 +2,8 @@
 
 
 require('../conf/init.php');
-$cart = '';
-$sukses = "";
-$gagal = "";
 cek();
+$msg = "";
 $tanggal = date("Y-m-d");
 $trapelanggan = isset($_POST['trapelanggan']) ? $_POST['trapelanggan'] : "";
 
@@ -20,9 +18,9 @@ if (isset($_POST['simpan'])) {
   start();
 
   if (empty($trapelanggan)) {
-    $msg = "Harap masukkan data dengan benar";
+    $msg = 'Harap masukkan data dengan benar';
   } else if (count($cart) == 0) {
-    $msg = "Keranjang Kosong";
+    $msg = 'Keranjang Kosong';
   } else {
 
     for ($i = 0; $i < count($cart); $i++) {
@@ -36,8 +34,6 @@ if (isset($_POST['simpan'])) {
         $err += 1;
       }
       $grandtotal += $sub;
-
-      $msg = $sql . '<br>';
     }
 
     $sql = "INSERT INTO transaksi values ('$trafaktur','$tanggal','$trapelanggan',$grandtotal,$userid)";
@@ -45,10 +41,10 @@ if (isset($_POST['simpan'])) {
     if (query($sql) && $err == 0) {
       commit();
       unset($_SESSION['cart']);
-      $msg = "Penjualan Berhasil disimpan";
+      $msg = 'Penjualan Berhasil disimpan';
     } else {
       rollback();
-      $msg = "GAGAL";
+      $msg = 'GAGAL';
     }
   }
 }
@@ -110,7 +106,7 @@ if (isset($_POST['simpan'])) {
         <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top"></nav>
         <div class="container-fluid">
           <h3 class="text-dark mb-4">Penjualan</h3>
-          <?php $msg ?> <h6 class="text-dark mb-4"></h6>
+          <?= $msg ? '<h6 class="text-dark mb-4">' . $msg . '</h6>' : "" ?>
           <form method="POST">
             <div class="row">
               <div class="col">
@@ -154,12 +150,11 @@ if (isset($_POST['simpan'])) {
                         <tbody>
                           <?php
 
-                          $cart = $_SESSION['cart'];
+                          $cart = (isset($_SESSION['cart']));
                           $total = 0;
 
                           if ($cart) {
                             foreach ($cart as $i => $val) {
-                              error_reporting(E_ALL && ~E_NOTICE);
                           ?>
                           <tr>
                             <td><?= $val['pronama'] ?></td>
@@ -168,7 +163,6 @@ if (isset($_POST['simpan'])) {
                             <td><a href="penjualan-hapus.php?p=<?= $val['proid'] ?>" class="btn btn-primary"
                                 style="background-color: #e74a3b;">Hapus</a></td>
                           </tr>
-
                           <?php
                               $total += $val['proharga'] * $val['jumlah'];
                             }

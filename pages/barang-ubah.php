@@ -2,7 +2,7 @@
 
 require '../conf/init.php';
 cek();
-
+$msg = "";
 if (isset($_POST['simpan'])) {
   $proid = $_GET['i'];
   $pronama = $_POST['pronama'];
@@ -10,14 +10,14 @@ if (isset($_POST['simpan'])) {
   $projumlah = $_POST['projumlah'];
 
   if (empty($pronama) || empty($proharga) || empty($projumlah)) {
-    echo 'Harap masukkan data dengan benar';
+    $msg = 'Harap masukkan data dengan benar';
   } else {
     $sql = "update produk set pronama='$pronama',proharga=$proharga,projumlah=$projumlah where proid=$proid";
     echo $sql;
     if (query($sql)) {
       header("Location: {$base_url}pages/barang.php");
     } else {
-      echo 'Gagal Mengubah Data ! Harap masukkan data dengan benar';
+      $msg = 'Gagal Mengubah Data ! Harap masukkan data dengan benar';
     }
   }
 }
