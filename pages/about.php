@@ -68,22 +68,23 @@
                         <h4 class=" card-subtitle mb-1" style="margin-bottom: 0px;">Front End</h4>
 
                         <p class="card-text mb-1">Muhammad Aulia AKbar<a class="card-link"
-                            href="https://github.com/msaifa"><i class="fab fa-github"
+                            href="https://github.com/SiKasir"><i class="fab fa-github"
                               style="margin-left: 20px;"></i></a></p>
                         </p>
                         <p class="card-text mb-1">Mahardika Candra Wicaksono<a class="card-link"
-                            href="https://github.com/msaifa"><i class="fab fa-github"
+                            href="https://github.com/SiKasir"><i class="fab fa-github"
                               style="margin-left: 20px;"></i></a></p>
                         </p>
                         <p class="card-text mb-5">Silvia Larasatul<a class="card-link"
-                            href="https://github.com/msaifa"><i class="fab fa-github"
+                            href="https://github.com/Silvi47"><i class="fab fa-github"
                               style="margin-left: 20px;"></i></a></p>
                         </p>
                         <h4 class="text-muted card-subtitle mb-1" style="margin-bottom: 0px;">Back End</h4>
-                        <p class="card-text mb-1">Wahrul Hidayat<a class="card-link" href="https://github.com/msaifa"><i
-                              class="fab fa-github" style="margin-left: 20px;"></i></a>
+                        <p class="card-text mb-1">Wahrul Hidayat<a class="card-link"
+                            href="https://github.com/lupacaratidur"><i class="fab fa-github"
+                              style="margin-left: 20px;"></i></a>
                         </p>
-                        <p class="card-text mb-1">Madong Yusuf<a class="card-link" href="https://github.com/msaifa"><i
+                        <p class="card-text mb-1">Madong Yusuf<a class="card-link" href="https://github.com/SiKasir"><i
                               class="fab fa-github" style="margin-left: 20px;"></i></a></p>
                         </p>
                       </div>
