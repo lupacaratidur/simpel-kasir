@@ -10,6 +10,7 @@ if (isset($_GET['c'])) {
 $sql = "SELECT * FROM produk where pronama like '%$cari%'";
 $res = query($sql);
 $count = total($sql);
+//
 
 ?>
 <!DOCTYPE html>
